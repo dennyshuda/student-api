@@ -1,7 +1,9 @@
 import { Router, Request, Response } from "express";
 
-export const HealthRouter: Router = Router();
+const HealthRouter: Router = Router();
 
-HealthRouter.get("/health", (req: Request, res: Response) => {
-  res.status(200).send({ status: 200 });
+HealthRouter.get("/", (req: Request, res: Response) => {
+  res.status(200).send("Hello, this is root for Student API");
 });
+
+export default HealthRouter;
